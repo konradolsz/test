@@ -98,7 +98,8 @@ button {
 }
 
 .container {
-    max-width: 72.75rem;
+    max-width: 90vh;
+    max-height: 90vh;
     margin: 0 auto;
 }
 
@@ -125,12 +126,17 @@ button {
 }
 
 button{
+    display:block;
     background-color: red;
-    font-size: 5rem;
+    font-size: 8vh;
     padding: var(--space-5) var(--space-7);
     border-radius: 30px;
     border: 1px solid red;
     color: white;
+}
+
+.section > a{
+    text-decoration: none;
 }
 
 button:hover{
@@ -141,7 +147,7 @@ button:hover{
 
 .fuck-u{
     color: hotpink;
-    font-size: 5rem;
+    font-size: 10vh;
 }
 
 .back{
