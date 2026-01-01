@@ -126,7 +126,7 @@ button {
 
 button{
     background-color: red;
-    font-size: 10rem;
+    font-size: 5rem;
     padding: var(--space-5) var(--space-7);
     border-radius: 30px;
     border: 1px solid red;
@@ -141,10 +141,10 @@ button:hover{
 
 .fuck-u{
     color: hotpink;
-    font-size: 10rem;
+    font-size: 5rem;
 }
 
 .back{
     padding: var(--space-3) var(--space-5);
-    font-size: x-large;
+    font-size: var(--font-size-x-large);
 }
