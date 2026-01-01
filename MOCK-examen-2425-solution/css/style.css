@@ -1,0 +1,381 @@
+:root {
+    /* colors */
+    --gold: #FFE01B;
+    --antiquewhite: #EBE1CD;
+    --black: #241C15;
+    --white: white;
+
+    /* spacing */
+    /* 8px */
+    --space-1: .5rem;
+    /* 12px */
+    --space-2: .75rem;
+    /* 16px */
+    --space-3: 1rem;
+    /* 18px */
+    --space-4: 1.125rem;
+    /* 24px */
+    --space-5: 1.5rem;
+    /* 32px */
+    --space-6: 2rem;
+    /* 48px */
+    --space-7: 3rem;
+    /* 56px */
+    --space-8: 3.5rem;
+    /* 80px */
+    --space-9: 5rem;
+
+    /* font weights */
+    --font-weight-light: 300;
+    --font-weight-bold: 600;
+
+    /* font sizes */
+    /* 12px */
+    --font-size-xx-small: 0.75rem;
+    /* 14px */
+    --font-size-x-small: 0.875rem;
+    /* 16px */
+    --font-size-small: 1rem;
+    /* 18px */
+    --font-size-normal: 1.125rem;
+    /* 26px */
+    --font-size-large: 1.625rem;
+    /* 32px */
+    --font-size-x-large: 2rem;
+    /* 48px */
+    --font-size-xx-large: 3rem;
+}
+
+/* Set the box-sizing property for all elements */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Basic default styling  */
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    /* Set the default text color */
+    color: var(--black);
+    /* Optional: add a background color that fills the whole page */
+    /* background-color: #333; */
+    /* Optional: font-smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* fluid images and svg */
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Default typography styling, add more styling like font-family here */
+
+h1,
+h2,
+h3,
+.h3,
+h4,
+h5,
+h6 {
+    font-family: "Libre Baskerville", serif;
+}
+
+h2 {
+    font-size: var(--font-size-xx-large);
+    line-height: 3.5rem;
+}
+
+h3,
+.h3 {
+    font-size: var(--font-size-x-large);
+    line-height: 2.5rem;
+}
+
+input, button {
+    font-family: "Inter", sans-serif;
+    font-size: var(--font-size-small);
+    line-height: 1.5;
+    /* reset the default button styling */
+    border: none;
+    padding: 0;
+    margin: 0;
+    /* Make them block to avoid extra space */
+    display: inline-block;
+}
+
+/* Placeholder: the text that is shown before user types in the input field */
+::placeholder {
+    color: var(--black);
+    opacity: 0.5;
+}
+
+/* Container class to center all elements that are inside in the middle */
+
+.container {
+    /* Make this value as big as you want */
+    /* In this case: 1164px */
+    max-width: 72.75rem;
+    /* Center the container */
+    margin: 0 auto;
+}
+
+/* visually hidden class */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Specific component classes */
+
+.header {
+    padding: var(--space-5);
+    background-color: var(--gold);
+    display: grid;
+    grid-template-columns: minmax(min-content, 1fr) auto minmax(min-content, 1fr);
+    align-items: center;
+}
+
+.header__button {
+    justify-self: end;
+}
+
+.logo__svg {
+    max-width: min-content;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    padding: var(--space-2) var(--space-5);
+    background-color: var(--black);
+    color: var(--gold);
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.button--lg {
+    padding: var(--space-4) var(--space-6);
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--black);
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.intro {
+    padding: var(--space-8) var(--space-5) var(--space-9);
+    background-color: var(--gold);
+}
+
+.intro__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: center;
+}
+
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    align-items: start;
+}
+
+.intro__text {
+    font-size: var(--font-size-large);
+    line-height: 2rem;
+    font-weight: var(--font-weight-light);
+}
+
+.content {
+    padding: var(--space-9) var(--space-5);
+    background-color: var(--white);
+}
+
+.feature__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-9);
+    align-items: center;
+}
+
+.feature__img--col2 {
+    order: 1;
+}
+
+.feature__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    align-items: start;
+}
+
+.feature__text {
+    font-size: var(--font-size-normal);
+    line-height: 1.5rem;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    text-decoration: none;
+    color: var(--black);
+    font-weight: var(--font-weight-bold);
+}
+
+.arrow__icon {
+    background-color: var(--gold);
+    padding: var(--space-1);
+    box-sizing: content-box;
+    border-radius: 100%;
+    transition: translate .1s ease-in-out;
+}
+
+.arrow:hover .arrow__icon {
+    translate: var(--space-1);
+}
+
+.podcast {
+    padding: var(--space-9) var(--space-5);
+    background-color: var(--antiquewhite);
+    color: var(--white);
+    text-align: center;
+    color: var(--black);
+}
+
+.podcast__container {
+    display: grid;
+    gap: var(--space-5);
+    justify-items: center;
+    max-width: 31.25rem;
+}
+
+.podcast__header {
+    text-align: center;
+}
+
+.podcast__text {
+    font-size: var(--font-size-normal);
+    line-height: 1.5rem;
+}
+
+.eyebrow {
+    font-size: var(--font-size-xx-small);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.footer {
+    padding: var(--space-5);
+    background-color: var(--black);
+    color: var(--antiquewhite);
+}
+
+.footer__title {
+    font-size: var(--font-size-small);
+    line-height: 1.5;
+    font-weight: var(--font-weight-bold);
+    font-family: "Inter", sans-serif;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 13.75rem)) minmax(min-content, 1fr);
+    gap: var(--space-3);
+}
+
+.footer__copy,
+.footer__terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-5);
+    align-items: center;
+    font-size: var(--font-size-x-small);
+    line-height: 1.5rem;
+    justify-content: space-between;
+}
+
+.footer__terms {
+    justify-self: end;
+}
+
+.footer__terms-link {
+    text-decoration: none;
+    color: var(--antiquewhite);
+    font-weight: var(--font-weight-bold);
+}
+
+.footer__terms-link:hover {
+    text-decoration: underline;
+}
+
+.footer__subscribe {
+    justify-self: end;
+}
+
+.subscribe {
+    display: flex;
+    gap: var(--space-5);
+    flex-direction: column;
+    align-items: start;
+    margin-top: var(--space-1);
+}
+
+.subscribe__form {
+    display: grid;
+    grid-template-columns: minmax(auto, 300px) auto;
+}
+
+.subscribe__input {
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--black);
+    border-radius: 4px 0 0 4px;
+    border-right-width: 0;
+    background-color: transparent;
+}
+
+.subscribe__button {
+    color: var(--antiquewhite);
+    border-radius: 0 4px 4px 0;
+}
+
